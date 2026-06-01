@@ -9,7 +9,6 @@ type ProductCardProps = {
   tag: string;
   title: string;
   description: string;
-  audience: string;
   pain: string;
   desire: string;
   href: string;
@@ -22,7 +21,6 @@ export default function ProductCard({
   tag,
   title,
   description,
-  audience,
   pain,
   desire,
   href,
@@ -51,7 +49,7 @@ export default function ProductCard({
             {name}
           </h3>
 
-          <p className="serif mt-4 text-4xl leading-none text-emerald-200">
+          <p className="serif mt-4 text-4xl leading-[0.95] text-emerald-200">
             {title}
           </p>
 
@@ -59,13 +57,6 @@ export default function ProductCard({
         </div>
 
         <div className="mt-8 space-y-4 rounded-[1.5rem] bg-black/20 p-5">
-          <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-white/40">
-              Público
-            </p>
-            <p className="mt-1 text-white/80">{audience}</p>
-          </div>
-
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-white/40">
               Dolor
@@ -83,7 +74,7 @@ export default function ProductCard({
 
         <a
           href={href}
-          className="mt-7 flex items-center justify-between rounded-full bg-white px-6 py-3 text-sm font-semibold text-emerald-950"
+          className="transparent-btn mt-7 flex items-center justify-between rounded-full px-6 py-3 text-sm font-semibold text-white transition"
         >
           Quiero esta guía
           <ArrowUpRight size={18} />

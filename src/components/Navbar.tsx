@@ -2,8 +2,40 @@
 
 import { motion } from "framer-motion";
 import { UserCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const links = [
+  { label: "Inicio", href: "#inicio", id: "inicio" },
+  { label: "Filosofía", href: "#filosofia", id: "filosofia" },
+  { label: "Guías", href: "#guias", id: "guias" },
+  { label: "Método", href: "#metodo", id: "metodo" },
+  { label: "Contacto", href: "#contacto", id: "contacto" },
+];
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState("inicio");
+
+  useEffect(() => {
+    const sections = links.map((link) => document.getElementById(link.id));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px" }
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -24 }}
@@ -12,33 +44,29 @@ export default function Navbar() {
       className="fixed left-0 top-0 z-40 w-full px-5 py-5 md:px-12"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
-        <a href="#" className="text-lg font-semibold tracking-[0.38em]">
+        <a href="#inicio" className="text-lg font-semibold tracking-[0.38em]">
           AETERNA
         </a>
 
-        <div className="hidden items-center gap-5 md:flex">
-          {["Inicio", "Guías", "Método", "Contacto"].map((item) => (
+        <div className="hidden items-center gap-4 md:flex">
+          {links.map((item) => (
             <a
-              key={item}
-              href={
-                item === "Inicio"
-                  ? "#inicio"
-                  : item === "Guías"
-                    ? "#guias"
-                    : item === "Método"
-                      ? "#metodo"
-                      : "#contacto"
-              }
-              className="rounded-full border border-white/35 px-7 py-2 text-sm font-medium text-white/90 backdrop-blur-xl transition hover:bg-white/15"
+              key={item.id}
+              href={item.href}
+              className={`transparent-btn rounded-full px-6 py-2 text-sm font-medium transition ${
+                activeSection === item.id
+                  ? "border-white bg-white/20 text-white"
+                  : "text-white/75"
+              }`}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
 
         <a
           href="#contacto"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/35 bg-white/10 backdrop-blur-xl"
+          className="transparent-btn flex h-10 w-10 items-center justify-center rounded-full"
         >
           <UserCircle size={24} />
         </a>

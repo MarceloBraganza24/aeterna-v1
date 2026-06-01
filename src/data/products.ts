@@ -6,7 +6,6 @@ export const products = [
     title: "Para transformar confusión en dirección.",
     description:
       "Un plan de acción concreto y ejecutable para quien parte de cero y busca su primera oportunidad digital.",
-    audience: "18-26 años",
     pain: "Tiene motivación, pero no tiene claridad ni estructura.",
     desire: "Independencia económica y trabajar desde cualquier lugar.",
     href: "#contacto",
@@ -17,10 +16,9 @@ export const products = [
     tag: "Nivel 02",
     title: "Administración aplicada + IA para monetizar conocimiento.",
     description:
-      "Pensado para estudiantes de economía, administración o emprendedores que necesitan profesionalizar sus procesos.",
-    audience: "22-30 años",
-    pain: "Tiene teoría, pero no sabe cómo aplicarla ni convertirla en ingresos.",
-    desire: "Traducir su carrera en resultados reales.",
+      "Pensado para estudiantes, profesionales o emprendedores que necesitan profesionalizar sus procesos.",
+    pain: "Tiene teoría o conocimiento, pero no sabe cómo aplicarlo ni convertirlo en ingresos.",
+    desire: "Traducir su conocimiento en resultados reales.",
     href: "#contacto",
   },
   {
@@ -30,7 +28,6 @@ export const products = [
     title: "Un sistema completo para ordenar, automatizar y escalar.",
     description:
       "Para personas con negocios que necesitan estructura, procesos y automatización sin perder el control.",
-    audience: "28-45 años",
     pain: "Todo depende de él/ella y está al límite operativo.",
     desire: "Liberar tiempo, ordenar procesos y construir libertad financiera.",
     href: "#contacto",

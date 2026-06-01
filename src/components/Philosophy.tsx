@@ -4,14 +4,12 @@ import { motion } from "framer-motion";
 
 const items = [
   {
+    number: "01",
     title: "Conocimiento real",
     text: "No se trata de teoría decorativa. Se trata de herramientas concretas para tomar acción.",
   },
   {
-    title: "Escalabilidad",
-    text: "Producto digital puro, entrega automática y costo marginal casi cero.",
-  },
-  {
+    number: "02",
     title: "Estructura sólida",
     text: "Procesos, ética, claridad comercial y formación orientada al resultado práctico.",
   },
@@ -24,6 +22,7 @@ export default function Philosophy() {
       className="relative overflow-hidden bg-[#03170f] px-5 py-28 md:px-12"
     >
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-emerald-500/20 blur-[140px]" />
+
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -47,7 +46,7 @@ export default function Philosophy() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
           {items.map((item, index) => (
             <motion.article
               key={item.title}
@@ -58,7 +57,7 @@ export default function Philosophy() {
               className="glass rounded-[2rem] p-8"
             >
               <span className="serif text-6xl text-emerald-300">
-                0{index + 1}
+                {item.number}
               </span>
               <h3 className="mt-8 text-xl font-semibold">{item.title}</h3>
               <p className="mt-4 leading-7 text-white/65">{item.text}</p>

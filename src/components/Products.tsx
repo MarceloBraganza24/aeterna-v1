@@ -13,12 +13,12 @@ export default function Products() {
             Tres productos, un sistema
           </p>
 
-          <h2 className="text-6xl font-medium tracking-[-0.08em] md:text-8xl">
+          <h2 className="text-6xl font-medium leading-[0.78] tracking-[-0.08em] md:text-8xl">
             Guías{" "}
             <span className="serif block font-normal italic">Prácticas</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-white/70">
+          <p className="mx-auto mt-8 max-w-2xl text-white/70">
             Cada guía representa un nivel de avance: claridad, profesionalización
             y estructura para construir autonomía.
           </p>
@@ -26,11 +26,7 @@ export default function Products() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           {products.map((product, index) => (
-            <ProductCard
-              key={product.name}
-              {...product}
-              index={index}
-            />
+            <ProductCard key={product.name} {...product} index={index} />
           ))}
         </div>
       </div>

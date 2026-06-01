@@ -51,13 +51,6 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <a
-        href="#filosofia"
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 text-sm text-white/70"
-      >
-        Scroll
-        <ArrowDown size={16} />
-      </a>
     </section>
   );
 }
