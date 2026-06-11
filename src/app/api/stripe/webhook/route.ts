@@ -98,34 +98,17 @@ export async function POST(req: Request) {
           })
           .join("");
 
+        if (!resend) {
+          console.warn("RESEND_API_KEY no configurada. Compra guardada sin enviar email.");
+          return Response.json({ received: true });
+        }
+
         await resend.emails.send({
           from: process.env.EMAIL_FROM!,
           to: customerEmail,
           subject: "Tu compra en AETERNA",
           html: `
-            <div style="font-family: Arial, sans-serif; background:#03170f; padding:40px;">
-              <div style="max-width:600px;margin:auto;background:#ffffff;border-radius:24px;padding:32px;">
-                <p style="letter-spacing:6px;color:#0f5132;font-weight:700;">AETERNA</p>
-
-                <h1 style="color:#111827;">Gracias por tu compra</h1>
-
-                <p style="color:#374151;line-height:1.7;">
-                  Tu pago fue confirmado correctamente. Ya podés descargar tus guías digitales.
-                </p>
-
-                <ul style="padding-left:20px;margin-top:24px;">
-                  ${linksHtml}
-                </ul>
-
-                <p style="color:#6b7280;font-size:14px;margin-top:32px;">
-                  Te recomendamos guardar este email para acceder nuevamente a tus guías.
-                </p>
-
-                <p style="color:#111827;margin-top:32px;">
-                  Equipo AETERNA
-                </p>
-              </div>
-            </div>
+            ...
           `,
         });
       }
