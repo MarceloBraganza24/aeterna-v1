@@ -44,7 +44,7 @@ export default function StructuredData() {
 
       {
         "@type": "Product",
-        name: "Método Admin.digital",
+        name: "Kit Bajo Control",
         description:
           "Administración aplicada e IA para monetizar conocimiento.",
         category: "Digital Product",
@@ -59,7 +59,7 @@ export default function StructuredData() {
 
       {
         "@type": "Product",
-        name: "Programa Híbrido",
+        name: "Kit De Fuga",
         description:
           "Sistema completo para ordenar, automatizar y escalar.",
         category: "Digital Product",

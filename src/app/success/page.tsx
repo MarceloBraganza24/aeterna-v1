@@ -11,8 +11,8 @@ const downloads: Record<string, string> = {
 
 const downloadNames: Record<string, string> = {
   kit_escape: "Kit de Escape",
-  admin_digital: "Método Admin.digital",
-  programa_hibrido: "Programa Híbrido",
+  admin_digital: "Kit Bajo Control",
+  programa_hibrido: "Kit De Fuga",
 };
 
 export default async function Success({

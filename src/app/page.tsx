@@ -7,9 +7,12 @@ import Method from "@/components/Method";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import CursorGlow from "@/components/CursorGlow";
+
 export default function Home() {
   return (
     <main>
+      <CursorGlow />
       <div className="noise" />
       <Navbar />
       <CartDrawer />

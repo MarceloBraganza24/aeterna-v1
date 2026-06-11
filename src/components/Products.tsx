@@ -20,7 +20,9 @@ export default function Products() {
 
           <h2 className="text-6xl font-medium leading-[0.78] tracking-[-0.08em] md:text-8xl">
             Guías{" "}
-            <span className="serif block font-normal italic">Prácticas</span>
+            <span className="serif block text-7xl font-normal italic leading-none md:text-[8rem]">
+              Prácticas
+            </span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-2xl text-white/70">

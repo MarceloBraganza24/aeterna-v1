@@ -14,7 +14,7 @@ export const products = [
   },
   {
     id: "admin_digital",
-    name: "Método Admin.digital",
+    name: "Kit Bajo Control",
     price: 59,
     priceLabel: "USD 59",
     tag: "Nivel 02",
@@ -27,7 +27,7 @@ export const products = [
   },
   {
     id: "programa_hibrido",
-    name: "Programa Híbrido",
+    name: "Kit De Fuga",
     price: 99,
     priceLabel: "USD 99",
     tag: "Nivel 03",
@@ -46,7 +46,7 @@ export const products = [
     tag: "Bundle",
     title: "Las 3 guías en una ruta completa.",
     description:
-      "Incluye Kit de Escape, Método Admin.digital y Programa Híbrido en una sola compra.",
+      "Incluye Kit de Escape, Kit Bajo Control y Kit De Fuga en una sola compra.",
     pain: "Quiere avanzar con una ruta completa sin comprar cada guía por separado.",
     desire: "Claridad, procesos, IA aplicada y estructura completa.",
     downloads: ["kit_escape", "admin_digital", "programa_hibrido"],
